@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Listino Prezzi LUMEA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(135deg,#fff3e0,#ffe0b2);
+    color:#4e342e;
+    padding:20px;
+}
+
+/* TITOLO PRINCIPALE */
+h1 {
+    text-align:center;
+    color:#e65100;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+/* TITOLI SEZIONI */
+h2 {
+    color:#ef6c00;
+    margin-top:30px;
+    border-bottom:2px solid #ffb74d;
+    padding-bottom:5px;
+}
+
+/* LISTA PREZZI */
+.container {
+    max-width:800px;
+    margin:auto;
+    background:rgba(255,255,255,0.6);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+p {
+    font-size:16px;
+    margin:8px 0;
+}
+
+/* PREZZI A DESTRA */
+p span {
+    float:right;
+    font-weight:600;
+    color:#e65100;
+}
+
+/* LINEA DIVISORIA */
+hr {
+    border:none;
+    border-top:2px dashed #ffb74d;
+    margin:25px 0;
+}
+
+/* BOTTONE */
+button {
+    display:block;
+    margin:30px auto;
+    padding:12px 25px;
+    background: linear-gradient(135deg,#fb8c00,#ef6c00);
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:15px;
+}
+
+button:hover {
+    background: linear-gradient(135deg,#ef6c00,#e65100);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Listino Prezzi</h1>
+
+<div class="container">
+
+   <h1> I Nostri Rituali di Bellezza 🌙</h1>
+
+<div class="container">
+
+    <h2> Massaggi 🌙</h2>
+    <p> Massaggio hot stone <span>75€</span></p>
+    <p> Massaggio candle <span>85€</span></p>
+    <p> Massaggio ayurvedico <span>90€</span></p>
+    <p> Massaggio decontratturante <span>75€</span></p>
+    <p> Massaggio drenante <span>75€</span></p>
+
+    <hr>
+
+    <h2> Trattamenti Viso 🌙</h2>
+    <p> Radiofrequenza viso <span>75€</span></p>
+    <p> LED Therapy (maschera LED) <span>45€</span></p>
+    <p> Ultrasuoni viso <span>65€</span></p>
+    <p> Microneedling <span>140€</span></p>
+    <p> Trattamento anti age oro <span>90€</span></p>
+
+    <hr>
+
+    <h2> Trattamenti Corpo 🌙</h2>
+    <p> Talassoterapia <span>80€</span></p>
+    <p> Trattamento anticellulite <span>65€</span></p>
+    <p> Chocoterapia <span>90€</span></p>
+    <p> Rituale detox <span>95€</span></p>
+
+    <hr>
+
+    <h2> Nail 🌙</h2>
+    <p> Manicure <span>20€</span></p>
+    <p> Manicure con smalto normale <span>25€</span></p>
+    <p> Manicure con semipermanente <span>50€</span></p>
+    <p> Gel unghie <span>70€</span></p>
+    <p> Refill unghie <span>60€</span></p>
+    <p> Ricostruzione unghie <span>90€</span></p>
+    <p> Pedicure estetico <span>35€</span></p>
+    <p> Pedicure curativo <span>40€</span></p>
+    <p> Pedicure con smalto normale <span>45€</span></p>
+    <p> Pedicure con semipermanente <span>60€</span></p>
+
+</div>
+
+<p style="text-align:center; margin-top:20px; font-style:italic;">
+ Tutti i trattamenti possono essere personalizzati per un’esperienza esclusiva e su misura 🌙
+</p>
+
+</div>
+
+<button onclick="goBack()">← Torna indietro</button>
+
+<script>
+function goBack() {
+    if (history.length > 1) {
+        history.back();
+    } else {
+        window.location.href = "index.html";
+    }
+}
+</script>
+
+</body>
+</html>
