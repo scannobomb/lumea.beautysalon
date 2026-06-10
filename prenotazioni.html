@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Prenotazioni LUMEA</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- STILE -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #fff3e0, #ffcc80);
+            font-family: 'Poppins', sans-serif;
+            color: #4e342e;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #e65100;
+        }
+
+        input, select {
+            width: 80%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #ffb74d;
+            margin: 8px 0;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus, select:focus {
+            border-color: #ef6c00;
+            box-shadow: 0 0 8px rgba(239,108,0,0.5);
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #fb8c00, #ef6c00);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #ef6c00, #e65100);
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        ul li {
+            background: rgba(255, 183, 77, 0.3);
+            padding: 12px;
+            border-radius: 12px;
+            margin: 10px auto;
+            max-width: 500px;
+            list-style: none;
+        }
+
+        a {
+            display:inline-block;
+            margin-top:30px;
+            padding:12px 25px;
+            background: linear-gradient(135deg, #ef6c00, #e65100);
+            color:white;
+            text-decoration:none;
+            border-radius:12px;
+            font-weight:bold;
+        }
+    </style>
+
+    <!-- SCRIPT -->
+    <script src="prenotazioni.js" defer></script>
+</head>
+
+<body>
+
+<h1>Prenota il tuo appuntamento</h1>
+
+<div>
+    <label>Nome</label><br>
+    <input type="text" id="nome"><br>
+
+    <label>Data</label><br>
+    <input type="date" id="data"><br>
+
+    <label>Orario</label><br>
+    <input type="time" id="ora"><br>
+
+    <label>Trattamento</label><br>
+
+<select id="trattamento" onchange="mostraDettagli()">
+    <optgroup label="🌙 Massaggi">
+        <option value="75">Massaggio hot stone</option>
+        <option value="85">Massaggio candle</option>
+        <option value="90">Massaggio ayurvedico</option>
+        <option value="75">Massaggio decontratturante</option>
+        <option value="75">Massaggio drenante</option>
+    </optgroup>
+
+    <optgroup label="✨ Viso">
+        <option value="75">Radiofrequenza viso</option>
+        <option value="45">LED Therapy</option>
+        <option value="65">Ultrasuoni viso</option>
+        <option value="140">Microneedling</option>
+        <option value="90">Trattamento anti age oro</option>
+    </optgroup>
+
+    <optgroup label="🌿 Corpo">
+        <option value="80">Talassoterapia</option>
+        <option value="65">Trattamento anticellulite</option>
+        <option value="90">Chocoterapia</option>
+        <option value="95">Rituale detox</option>
+    </optgroup>
+
+    <optgroup label="💫 Nail">
+        <option value="20">Manicure</option>
+        <option value="25">Manicure smalto normale</option>
+        <option value="50">Manicure semipermanente</option>
+        <option value="70">Gel unghie</option>
+        <option value="60">Refill unghie</option>
+        <option value="90">Ricostruzione unghie</option>
+        <option value="35">Pedicure estetico</option>
+        <option value="40">Pedicure curativo</option>
+        <option value="45">Pedicure smalto normale</option>
+        <option value="60">Pedicure semipermanente</option>
+    </optgroup>
+</select>
+
+<p id="descrizione" style="font-style:italic; margin-top:10px;"></p>
+<p id="prezzo" style="font-weight:bold; color:#e65100;"></p>
+
+    <button onclick="prenota()">Conferma prenotazione</button>
+</div>
+
+<hr>
+
+<h2>Appuntamenti prenotati</h2>
+<ul id="lista"></ul>
+
+<!-- TORNA INDIETRO -->
+<a href="index.html">← Torna al sito</a>
+
+</body>
+</html>
